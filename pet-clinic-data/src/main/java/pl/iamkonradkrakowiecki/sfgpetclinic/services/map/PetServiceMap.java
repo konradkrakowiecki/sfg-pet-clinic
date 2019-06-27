@@ -1,11 +1,11 @@
 package pl.iamkonradkrakowiecki.sfgpetclinic.services.map;
 
 import pl.iamkonradkrakowiecki.sfgpetclinic.model.Pet;
-import pl.iamkonradkrakowiecki.sfgpetclinic.services.CrudService;
+import pl.iamkonradkrakowiecki.sfgpetclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
     @Override
     public Set<Pet> findAll() {
