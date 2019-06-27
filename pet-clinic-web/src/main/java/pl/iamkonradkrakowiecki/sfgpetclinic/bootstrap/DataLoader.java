@@ -6,8 +6,6 @@ import pl.iamkonradkrakowiecki.sfgpetclinic.model.Owner;
 import pl.iamkonradkrakowiecki.sfgpetclinic.model.Vet;
 import pl.iamkonradkrakowiecki.sfgpetclinic.services.OwnerService;
 import pl.iamkonradkrakowiecki.sfgpetclinic.services.VetService;
-import pl.iamkonradkrakowiecki.sfgpetclinic.services.map.OwnerServiceMap;
-import pl.iamkonradkrakowiecki.sfgpetclinic.services.map.VetMapService;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetMapService();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override
